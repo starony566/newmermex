@@ -511,9 +511,7 @@ footer{
 
 
   @media screen and (max-width: 767px){
-    body{
-        /* background-color: blue; */
-    }
+    
     .menu{
         width: 90%;
         margin-left: 5%;
@@ -616,9 +614,7 @@ footer{
     *{
         box-sizing: border-box;
     }
-    body{
-        /* background-color: blue; */
-    }
+   
     .menu{
         width: 95%;
         margin-left: 10%;
@@ -630,9 +626,7 @@ footer{
     .button-div{
         display: none;
     }
-    .section1{
-        /* padding: 80px 50px; */
-    }
+   
     .section1> .section1button{
         /* align-items: center; */
         margin-left: 95px;
