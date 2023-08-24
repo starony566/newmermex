@@ -226,6 +226,20 @@
         </div>
     </footer>
 
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
 
     <div id="navbar">
         <a href="#default" id="logo">CompanyLogo</a>
@@ -278,9 +292,21 @@
       });
     }
     </script>
+
+    <button onclick="window.print()">Print this page</button>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
     
-
-
+    <script>
+        const product = {
+            name: 'collins',
+            age: 20
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.age);
+        product.name = 'cotton sacks';
+        console.log(product);
+    </script>
 </body>
 
 </html>

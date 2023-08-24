@@ -306,20 +306,21 @@ body{
     outline: none;
     font-size: 28px;
     border: none;
+    height: 3rem;
     background-color: white;
-    padding-top: 4%;
+    margin-bottom: -2%;
 }
 
 .collapsible:after {
     content: '\002B';
     color: rgb(26, 23, 23);
     float: right;
-    margin-left: 5px;
-    padding: 5px;
     border: 1px solid rgb(182,181,196);
-    width: 30px;
+    width: 15px;
+    height: 15px;
+    font-size: 18px;
     border-radius: 50px;
-    padding-left: 1.5%;
+    padding: 1%;
     
 }
 
@@ -334,7 +335,6 @@ body{
     transition: max-height 0.2s ease-out;
     font-size: 15px;
     color: black;
-    
   }
   
 
@@ -568,7 +568,7 @@ footer{
     }
     .section4 .div1, .div2, .div3{
         width: 12rem;
-       
+
     }
     .morehappy{
         margin-left: -25%;
@@ -583,15 +583,14 @@ footer{
         gap: 10px;
         font-size: 28px;        
     }
+}
 
-  }
 
-
-  @media (max-width: 600px){
+@media (max-width: 600px){
     *{
         box-sizing: border-box;
     }
-   
+
     .menu{
         width: 95%;
         margin-left: 10%;
@@ -603,11 +602,10 @@ footer{
     .button-div{
         display: none;
     }
-   
+
     .section1> .section1button{
         /* align-items: center; */
         margin-left: 95px;
-       
     }
     .section2-div{
         width: 100%;
@@ -623,7 +621,6 @@ footer{
         width: fit-content;
         border-radius: 10px;
         font-size: 22px;
-       
     }
     .section4{
         width: 100%;
@@ -633,8 +630,7 @@ footer{
         
     }
     .section4 .div1, .div2, .div3{
-        width: 10rem;
-       
+        width: 10rem; 
     }
     .morehappy{
         margin-left: -25%;
@@ -652,7 +648,6 @@ footer{
         width: 29rem;
         padding-bottom: 25%;
         margin-left: -5%;
-        
     }
     
     
@@ -680,5 +675,5 @@ footer{
         padding-top: 15px;
         padding-bottom: 25px;
     }
-  }
+}
     
