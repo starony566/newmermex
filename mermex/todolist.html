@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @keyframes slideInLeft {
+        0% {
+            transform: translateX(50%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+        }
+
+        header {
+        animation: 1s ease-out 2s 1 slideInLeft;
+        background: #666;
+        padding: 40px;
+        }
+
+        a {
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        color: #fff;
+        }
+    </style>
+
+    <style>
+    .loading-icon {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #3498db;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+}
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+}
+    </style>
+    <header>
+        <a href="#">Books</a>
+        <a href="#">Quizzes</a>
+        <a href="#">Snippets</a>
+        <a href="#">Tools</a>
+    </header>
+
+    <div class="loading-icon"></div>
+
+    <p>to do list</p>
+    <input placeholder="to do list" class="js-name-input">
+    <button onclick="
+    AddTodo();">ADD</button>
+
+    <div class="js-todo-list">text</div>
+    
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
+    
+    <p id="demo"></p>
+    
+    <button onclick="function3()">Random number</button>
+    <p id="demoo"></p>
+
+    <button onclick="function4()">Random integer</button>
+    <p id="demooo"></p>
+
+<script>
+    const todoList = ['make dinner', 'wash dishes'];
+    let todoListHTML = '';
+    for (let i =0; i < todoList.length; i++) {
+        const todo = todoList[i];
+        const html = `<p>${todo}</p>`;
+        // const html = `<p>todoList[i]</p>`
+        todoListHTML += html;
+    }
+    console.log(todoListHTML);
+    document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+    function addTodo () {
+        const inputElement = document.querySelector('.js-name-input');
+        const name = inputElement.value;
+
+        todoList.push(name);
+        console.log(todoList);
+        inputElement.value = '';
+    }
+</script>
+<script>
+const fruit1 = ["Banana", "Orange", "Apple", "Kiwi"];
+let f = fruit1.sort();
+console.log(f);
+
+const d = new Date();
+//alert(d);
+year = d.getFullYear();
+</script>
+<script>
+   var ourArray = [];
+   for (var i = 0; i < 10; i+= 2) {
+    ourArray.push(i);
+    console.log(ourArray);
+   }
+</script>
+<script>
+   const points = [40, 100, 102,200, 1, 5, 25, 10];
+   document.getElementById("demo").innerHTML = points;
+
+   function myFunction1() {
+    points.sort();
+    document.getElementById("demo").innerHTML = points;
+   }
+
+   function myFunction2() {
+    points.sort(function(a,b){return (a-b)})
+    document.getElementById("demo").innerHTML = points;
+   }
+</script>
+    anonymous function
+<script>
+    //(function () {return alert(" I' a function, and I'm anonymous")})()
+</script>
+
+<script>
+    function function3() {
+        document.getElementById("demoo").innerHTML = Math.random();
+    }
+</script>
+<script>
+    function function4() {
+        document.getElementById("demooo").innerHTML = Math.floor(Math.random() *11);
+    }
+</script>
+
+<script>
+ 
+</script>
+</body>    
+</html>

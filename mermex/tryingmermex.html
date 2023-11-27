@@ -16,7 +16,7 @@
 </head>
 <body>
      
-    <div class="menu">
+    <div class="menu" id="navbar">
         <div>
             <img src="https://assets.website-files.com/645ca45aacfcd1bb493db47a/645caa523548076c87224464_Logo.svg" loading="lazy" alt="Logo">
         </div>
@@ -34,6 +34,7 @@
         <div class="button-div">
             <button class="button1">Log In</button>
             <button class="button2">Buy Template</button>
+            <button onclick="myFunctionDark()">dark</button>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -126,9 +127,7 @@
         <div class="section4-div">
             <div>
                 <h3>45 %</h3>
-                <div class="div1" id="div1">
-                    <!-- <i class='bx bx-cloud'></i><i class='bx bx-cloud'></i><i class='bx bx-cloud'></i><i class='bx bx-cloud'></i>
-                    <i class='bx bx-cloud'></i><i class='bx bx-cloud'></i><i class='bx bx-cloud'></i><i class='bx bx-cloud'></i> -->
+                <div class="div1" id="scroll-move-div">
                     <div><p>Reliable Cloud</p><p>Storage</p></div>
                 </div>
             </div>
@@ -226,40 +225,45 @@
         </div>
     </footer>
 
-    <div class="topnav">
-        <a href="#home" class="active">Logo</a>
-        <!-- Navigation links (hidden by default) -->
+     <div class="topnav">
+        <a href="#home" class="active1">Logo</a>
         <div id="myLinks">
           <a href="#news">News</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
-      </div>
-
-
-    <div id="navbar">
-        <a href="#default" id="logo">CompanyLogo</a>
-        <div id="navbar-right">
-          <a class="active1" href="#home">Home</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-        </div>
-      </div>
-
+    </div> 
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
+    <script>
+        function myFunctionDark(){
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+    </script>
+        
+      
 <script>
         window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        document.getElementById("navbar").style.padding = "30px 10px";
-        document.getElementById("logo").style.fontSize = "25px";
+        document.getElementById("navbar").style.padding = "20px 10px";
+        // document.getElementById("logo").style.fontSize = "25px";
     } else {
         document.getElementById("navbar").style.padding = "80px 10px";
-        document.getElementById("logo").style.fontSize = "35px";
+        // document.getElementById("logo").style.fontSize = "35px";
     }
 }
 </script>
@@ -276,28 +280,28 @@
         }
     </script>
 
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } 
-      });
-    }
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
     </script>
 
     <button onclick="window.print()">Print this page</button>
     <button onclick="this.innerHTML=Date()">The time is?</button>
     
     <script>
-        const product = {
+        let product = {
             name: 'collins',
             age: 20
         };
@@ -307,6 +311,126 @@
         product.name = 'cotton sacks';
         console.log(product);
     </script>
+    <p id="demo"></p>
+
+    <script>
+    function toCelsius(f) {
+      return (5/9) * (f-32);
+    }
+    
+    let value = toCelsius(77);
+    document.getElementById("demo").innerHTML = value;
+    </script>
+   
+    
+    <button onclick="myFunctiona()">Alphabetically</button>
+    <button onclick="myFunctionb()">Sort Numerically</button>
+
+    <p id="demo"></p>
+        <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        
+
+        function myFunctiona(){
+            points.sort(function(a, b){return a - b});
+        document.getElementById("demo").innerHTML = points;
+        }
+        function myFunctionb(){
+            points.reverse(function(a, b){return a - b});
+        document.getElementById("demo").innerHTML = points;
+        }
+        </script>
+
+        
+
+        <button onclick="myFunctionRan()">Try it</button>
+        <p id="demor"></p>
+        <p id="demo1a"></p>
+
+
+        <input id="age" value="18" />
+        <button onclick="myFunctionAge()">Try it</button>
+        <p id="demoage"></p>
+
+
+        <script>
+        // const pointran = [40, 100, 1, 5, 25, 10];
+        // document.getElementById("demor").innerHTML = pointran;
+        
+        // function myFunctionRan(){
+            //     pointran.sort(function(){return 0.5 - Math.random()});
+            //     document.getElementById("demor").innerHTML = pointran;
+            // }
+            const pointran = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demor").innerHTML = pointran;
+        function myFunctionRan(){
+            for(let i = pointran.length -1; i > 0; i--){
+                let j = Math.floor(Math.random() * (i+1));
+                let k = pointran[i];
+                pointran[i] = pointran[j];
+                pointran[j] = k;
+            }
+            document.getElementById("demor").innerHTML = pointran;
+        }
+          
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+                
+        }   
+        document.getElementById("demo1a").innerHTML = day;
+
+        function myFunctionAge(){
+            let age = document.getElementById("age").value;
+            let votable = (age < 18) ? "too young": "old enough";
+            document.getElementById("demoage").innerHTML = votable + " to vote.";
+        }
+        </script>
+         <script>
+            const the_animation = document.querySelectorAll('.animation')
+       
+       const observer = new IntersectionObserver((entries) => {
+           entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                   entry.target.classList.add('scroll-animation')
+               }
+                   else {
+                       entry.target.classList.remove('scroll-animation')
+                   }
+               
+           })
+       },
+          { threshold: 0.5
+          });
+       //
+         for (let i = 0; i < the_animation.length; i++) {
+          const elements = the_animation[i];
+       
+           observer.observe(elements);
+         } 
+        </script>
+
+        
 </body>
 
 </html>
