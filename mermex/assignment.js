@@ -83,11 +83,11 @@ let lowercase = uppercase.toLowerCase()
 
 
  const names = 'onyeisi'
-// let slice = names.slice(0, 1)
-// let sliceFirst = names.slice(1,names.length)
-// let sliceToUpper = slice.toUpperCase()
-// let convertedName = `${sliceToUpper}${sliceFirst}`
-// console.log(convertedName)
+let slice = names.slice(0, 1)
+let sliceFirst = names.slice(1,names.length)
+let sliceToUpper = slice.toUpperCase()
+let convertedName = `${sliceToUpper}${sliceFirst}`
+console.log(convertedName)
 
 
 //const names = 'onyeisi'
@@ -97,30 +97,56 @@ let lowercase = uppercase.toLowerCase()
 // let convertedName = `${sliceToUpper}${sliceFirst}`
 // console.log(convertedName)
 
-let toUpper = names.charAt([0,]).toUpperCase()
-let sliceFirst = names.substring(1,names.length)
-let convert = `${toUpper}${sliceFirst}`
-console.log(convert)
+// let toUpper = names.charAt(0).toUpperCase()
+// let sliceFirst = names.substring(1,names.length)
+// let convert = `${toUpper}${sliceFirst}`
+// console.log(convert)
     
-const namesAll = 'christain, onyeisi, ekele, elvis, excel, solomon'
-let toArray = namesAll.split()
-let replace = namesAll.replace('christain', 'obed')
-let replaceAll = namesAll.replaceAll()
-console.log(toArray)
-console.log(replace)
+
+
+
+
 
 
 // Using the map function
-const originalArray = ["apple", "banana", "cherry"];
-let firstLetters = originalArray.map(w => w[0]);
+// const originalArray = ["apple", "banana", "cherry"];
+// let firstLetters = originalArray.map(w => w[0]);
+// let firstLettersToArray = firstLetters.toString()
+// let originalArrayToCapital = firstLettersToArray.toLocaleUpperCase()
 
-console.log(firstLetters.toUpperCase())
+// console.log(originalArrayToCapital)
+// console.log(firstLettersToArray)
+// console.log(firstLetters)
 
 // Alternatively, using a for loop
 // const firstLetters = [];
 // for (let i = 0; i < originalArray.length; i++) {
 //   firstLetters.push(originalArray[i][0]);
 // }
+
+// 27-11-2003 assignment
+// create a string that takes six names 
+const namesAll = 'christain, onyeisi, ekele, elvis, excel, solomon'
+let toUpper1 = namesAll.charAt(0).toUpperCase()
+let sliceFirst1 = namesAll.substring(1, 10)
+let convert1 = `${toUpper1}${sliceFirst1}`
+let toUpper2 = namesAll.charAt(11).toUpperCase()
+let sliceFirst2 = namesAll.substring(12,19)
+let convert2 = `${toUpper2}${sliceFirst2}`
+let toUpper3 = namesAll.charAt(20).toUpperCase()
+let sliceFirst3 = namesAll.substring(21,26)
+let convert3 = `${toUpper3}${sliceFirst3}`
+let toUpper4 = namesAll.charAt(27).toUpperCase()
+let sliceFirst4 = namesAll.substring(28,33)
+let convert4 = `${toUpper4}${sliceFirst4}`
+let toUpper5 = namesAll.charAt(34).toUpperCase()
+let sliceFirst5 = namesAll.substring(35,40)
+let convert5 = `${toUpper5}${sliceFirst5}`
+let toUpper6 = namesAll.charAt(41).toUpperCase()
+let sliceFirst6 = namesAll.substring(42,48)
+let convert6 = `${toUpper6}${sliceFirst6}`
+let nameDisplay = `${convert1} ${convert2} ${convert3} ${convert4} ${convert5} ${convert6}`
+console.log(nameDisplay)
 
 
 
